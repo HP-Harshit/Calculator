@@ -5,7 +5,7 @@ public class Calculator {
         System.out.println("Welcome to Calculator");
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Choose an operation: 1 for Addition, 2 for Subtraction, 3 for Multiplication");
+        System.out.println("Choose an operation: 1 for Addition, 2 for Subtraction, 3 for Multiplication, 4 for Division");
         int choice = scanner.nextInt();
         
         System.out.println("Enter two numbers:");
@@ -24,6 +24,14 @@ public class Calculator {
             case 3:
                 int product = num1 * num2;
                 System.out.println("The product is: " + product);
+                break;
+            case 4:
+                if (num2 != 0) {
+                    int quotient = num1 / num2;
+                    System.out.println("The quotient is: " + quotient);
+                } else {
+                    System.out.println("Cannot divide by zero.");
+                }
                 break;
             default:
                 System.out.println("Invalid choice.");
