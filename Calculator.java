@@ -5,7 +5,7 @@ public class Calculator {
         System.out.println("Welcome to Calculator");
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Choose an operation: 1 for Addition, 2 for Subtraction");
+        System.out.println("Choose an operation: 1 for Addition, 2 for Subtraction, 3 for Multiplication");
         int choice = scanner.nextInt();
         
         System.out.println("Enter two numbers:");
@@ -20,6 +20,10 @@ public class Calculator {
             case 2:
                 int difference = num1 - num2;
                 System.out.println("The difference is: " + difference);
+                break;
+            case 3:
+                int product = num1 * num2;
+                System.out.println("The product is: " + product);
                 break;
             default:
                 System.out.println("Invalid choice.");
